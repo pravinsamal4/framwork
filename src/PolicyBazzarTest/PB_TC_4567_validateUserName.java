@@ -6,6 +6,7 @@ import java.util.Set;
 
 import org.apache.poi.EncryptedDocumentException;
 import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -77,6 +78,7 @@ public class PB_TC_4567_validateUserName extends Base {
 	
 	@AfterClass
 	public void quitBrowser() throws InterruptedException {
+		Reporter.log("closing browser", true);
 		closeBrowser();
 		Utility.waitTime(1000);
 	}
